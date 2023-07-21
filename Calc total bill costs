@@ -1,0 +1,47 @@
+import java.util.*;
+public class Main {
+
+    public static void main(String[] args) {
+        //To display on the activity tab
+        double bills;
+        double totalCost = 0.0;
+        double max = 0;
+        int maxIndex = 0;
+        double low = 1000000000.0;
+        int lowIndex = 0;
+        Scanner scan = new Scanner(System.in);
+        String[] months = new String[]{"Janurary", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"}; 
+        double[] finances = new double[12]; 
+        for(int i = 0; i <12;i++){
+        System.out.println("Enter the bills for " + months[i]);
+        bills = scan.nextDouble();
+        finances[i] = bills;
+        totalCost+=bills;
+        if(bills > max){
+            max = bills;
+            maxIndex = i;}
+        else if(bills < low){
+            low = bills;
+            lowIndex = i;
+        }
+        }
+        System.out.println("\n\n\nThe total cost of this years bills was: " +totalCost);
+        System.out.println("The month with the HIGHEST bills was: " + months[maxIndex] + "($" + max + ")");
+        System.out.println("The month with the LOWEST bills was: "+ months[lowIndex] + "($" + low + ")");
+    
+
+
+        
+
+       
+        
+    
+    }
+
+
+   
+}
+        
+
+
+
